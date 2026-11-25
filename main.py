@@ -13,6 +13,12 @@ ENTRY = (
     "lettuce alive past Tuesday."
 )
 
+# Self-gate: the competition caps the line at 200 characters and the
+# gate refuses anything that is not one line of 1-200 characters.
+# Fail loudly here instead of shipping an entry the gate would refuse.
+if not 1 <= len(ENTRY) <= 200 or "\n" in ENTRY or not ENTRY.strip():
+    raise SystemExit("entry must be one line of 1-200 characters")
+
 
 def main():
     out_dir = "/output"
