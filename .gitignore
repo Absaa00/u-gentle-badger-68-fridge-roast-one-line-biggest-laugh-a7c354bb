@@ -1,0 +1,12 @@
+# u-gentle-badger-68 fridge roast: the badger hoards nothing here.
+# Unique to this entry: ignore the fridge's own leftovers and the
+# build dust from roasting one smart appliance, one line at a time.
+__pycache__/
+*.pyc
+*.pyo
+/output/
+fridge-roast-*.log
+badger-roast-*.tmp
+*.tar.gz
+*.zip
+.DS_Store
